@@ -6,7 +6,7 @@
 }
 
 .trip-title {
-    font-size: 7rem;
+    font-size: 6rem;
     font-weight: bold;
     margin: 1rem;
     text-align: center;
@@ -35,7 +35,7 @@
 
 .trip-btn {
     margin: 1rem;
-    padding: 1rem;
+    padding: .5rem;
     font-size: 1.5rem;
     border: 1px solid #ccc;
     border-radius: 55px;
@@ -43,6 +43,11 @@
     cursor: pointer;
     width: 150px;
     color: white;
+    transition: transform 0.2s ease;
+}
+
+.trip-btn:hover {
+    transform: scale(1.1);
 }
 
 .trip-list {
@@ -84,9 +89,9 @@
    background-color: white;
     border: none;
     cursor: pointer;
-    font-size: 1.5rem;
-    color: purple;
-
+    font-size: 1rem;
+    color: gray;
+    text-align: center;
 }
 
 .hotel-website {
@@ -123,10 +128,55 @@
 
 .add-hotel-btn {
     background-color: white;
-    border: solid 1px;
+    border: none;
     cursor: pointer;
     margin: 1rem;
+    font-size: 3rem;
+    color: purple;
+    transition: transform 0.2s ease;
+}
+
+.add-hotel-btn:hover {
+    transform: scale(1.1);
+}
+
+.cost-btn-icon {
+    color: green;
+}
+
+.cost-btn {
+    border: none;
+    cursor: pointer;
+    font-size: 3rem;
+    transition: transform 0.2s ease;
+    background-color: white;
+}
+
+.cost-btn:hover {
+    transform: scale(1.1);
+}
+
+.cost-input {
     font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    width: 4rem;
+}
+
+.cost-input:focus {
+    outline: none;
+    border: solid 1px;
+}
+
+.cost-value {
+    font-size: 1.5rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.cost-icon {
+    color: green;
 }
 
 @media (max-width: 700px) {
