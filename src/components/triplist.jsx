@@ -36,7 +36,13 @@ const TripList = () => {
     }
   };
 
-  const handleDelete = (tripId, hotelId) => {
+  const handleDeleteTrip = (tripId) => {
+    const updatedTrips = trips.filter((trip) => trip.id !== tripId);
+    setTrips(updatedTrips);
+    setSelectedTrip(null);
+  };
+
+  const handleDeleteHotelOption = (tripId, hotelId) => {
     const updatedTrips = trips.map((trip) => {
       if (trip.id === tripId) {
         const updatedHotelOptions = trip.hotelOptions.filter(
@@ -134,10 +140,14 @@ const TripList = () => {
               >
                 <span className="trip-name">
                   {trip.name}
-                  {trip.hotelOptions.length > 0 && (
+                  {isTripSelected(trip.id) && (
                     <a
                       className="hotel-icon-link"
-                      href={trip.hotelOptions[0].hotelWebsite}
+                      href={
+                        trip.hotelOptions.length > 0
+                          ? trip.hotelOptions[0].hotelWebsite
+                          : "#"
+                      }
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -171,7 +181,9 @@ const TripList = () => {
                           </button>
                           <button
                             className="delete-btn"
-                            onClick={() => handleDelete(trip.id, option.id)}
+                            onClick={() =>
+                              handleDeleteHotelOption(trip.id, option.id)
+                            }
                           >
                             <FiDelete />
                           </button>
@@ -179,10 +191,22 @@ const TripList = () => {
                       ))}
                       <button
                         className="add-hotel-btn"
-                        onClick={(event) => handleHotelOptionSubmit(event, trip.id)}
+                        onClick={(event) =>
+                          handleHotelOptionSubmit(event, trip.id)
+                        }
                       >
                         Add Hotel Option
                       </button>
+                      {isTripSelected(trip.id) && (
+                  <div className="trip-options">
+                    <button
+                      className="delete-btn"
+                      onClick={() => handleDeleteTrip(trip.id)}
+                    >
+                      < FiDelete />
+                    </button>
+                  </div>
+                )}
                     </div>
                   </>
                 )}
@@ -193,6 +217,6 @@ const TripList = () => {
       )}
     </div>
   );
-                        };  
-                        
+};
+
 export default TripList;
