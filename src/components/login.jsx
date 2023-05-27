@@ -54,6 +54,9 @@ const Login = () => {
                 <button className="login-btn" type="submit">Login</button>
             </form>
             </div>
+            <div>
+                <p className="login-text">The world awaits.</p>
+            </div>
         </div>
     )
 }

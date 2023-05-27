@@ -50,11 +50,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+  }
+  
 
-.trip-list-ul {
+  .trip-list-ul {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     list-style: none;
     margin: 2rem;
@@ -63,7 +64,7 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     text-align: left;
-}
+  }
 
 .trip-list-li {
     margin: 1rem;
@@ -116,6 +117,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    color: purple;
 
 }
 
@@ -133,27 +135,27 @@
     }
 
     .trip-input {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .trip-btn {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .trip-list-ul {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .trip-list-li {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .hotel-input {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 
     .hotel-btn {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 
     .hotel-icon {
