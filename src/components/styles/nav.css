@@ -1,0 +1,24 @@
+.navBar {
+    background-color: #0082ad !important;
+}
+
+.navBar a {
+    color: white !important;
+}
+
+.navBar a:hover {
+    color: #0082ad !important;
+    background-color: white !important;
+    border-radius: 25px !important;
+}
+
+.navBrand {
+    font-size: 2rem !important;
+    font-weight: bold !important;
+    margin: 1rem !important;
+}
+
+.nav-link {
+    margin: 1rem !important;
+}
+
