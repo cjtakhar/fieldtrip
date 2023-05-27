@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Dash />} />
+          <Route path="/fieldtrip" element={<Dash />} />
         </Routes>
       </BrowserRouter>
     </div>

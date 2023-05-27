@@ -9,6 +9,7 @@
     font-size: 7rem;
     font-weight: bold;
     margin: 1rem;
+    text-align: center;
 }
 
 .trip-form {
@@ -118,4 +119,63 @@
     border: solid 1px;
     cursor: pointer;
     margin: 1rem;
+}
+
+@media (max-width: 700px) {
+    .trip-title {
+        font-size: 4rem;
+    }
+
+    .trip-input {
+        font-size: 1rem;
+    }
+
+    .trip-btn {
+        font-size: 1rem;
+    }
+
+    .trip-list-ul {
+        font-size: 1rem;
+    }
+
+    .trip-list-li {
+        font-size: 1rem;
+    }
+
+    .hotel-input {
+        font-size: 1rem;
+    }
+
+    .hotel-btn {
+        font-size: 1rem;
+    }
+
+    .hotel-icon {
+        font-size: 1rem;
+    }
+
+    .add-hotel-btn {
+        font-size: 1rem;
+    }
+
+    .delete-btn {
+        font-size: 1rem;
+    }
+
+    .hotel-website {
+        font-size: 1rem;
+    }
+
+    .trip-container {
+        font-size: 1rem;
+    }
+
+    .trip-form {
+        font-size: 1rem;
+    }
+
+    .trip-list {
+        font-size: 1rem;
+    }
+    
 }
