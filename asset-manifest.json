@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/fieldtrip/static/css/main.485cc300.css",
+    "main.js": "/fieldtrip/static/js/main.6321d782.js",
+    "static/js/787.4e9c8a4f.chunk.js": "/fieldtrip/static/js/787.4e9c8a4f.chunk.js",
+    "index.html": "/fieldtrip/index.html",
+    "main.485cc300.css.map": "/fieldtrip/static/css/main.485cc300.css.map",
+    "main.6321d782.js.map": "/fieldtrip/static/js/main.6321d782.js.map",
+    "787.4e9c8a4f.chunk.js.map": "/fieldtrip/static/js/787.4e9c8a4f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.485cc300.css",
+    "static/js/main.6321d782.js"
+  ]
+}
