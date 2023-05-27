@@ -138,25 +138,11 @@ const TripList = () => {
                 key={trip.id}
                 onClick={() => handleTripClick(trip.id)}
               >
-                <span className="trip-name">
-                  {trip.name}
-                  {isTripSelected(trip.id) && (
-                    <a
-                      className="hotel-icon-link"
-                      href={
-                        trip.hotelOptions.length > 0
-                          ? trip.hotelOptions[0].hotelWebsite
-                          : "#"
-                      }
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <BiHotel className="hotel-icon" />
-                    </a>
-                  )}
-                </span>
-                {isTripSelected(trip.id) && (
+                {isTripSelected(trip.id) ? (
                   <>
+                    <span className="trip-name">
+                      {trip.name}
+                    </span>
                     <div className="hotel-options">
                       {trip.hotelOptions.map((option) => (
                         <form
@@ -197,18 +183,34 @@ const TripList = () => {
                       >
                         Add Hotel Option
                       </button>
-                      {isTripSelected(trip.id) && (
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <span className="trip-name">
+                      {trip.name}
+                      {trip.hotelOptions.length > 0 && (
+                        <a
+                          className="hotel-icon-link"
+                          href={trip.hotelOptions[0].hotelWebsite}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <BiHotel className="hotel-icon" />
+                        </a>
+                      )}
+                    </span>
+                  </>
+                )}
+                {isTripSelected(trip.id) && (
                   <div className="trip-options">
                     <button
                       className="delete-btn"
                       onClick={() => handleDeleteTrip(trip.id)}
                     >
-                      < FiDelete />
+                      <FiDelete />
                     </button>
                   </div>
-                )}
-                    </div>
-                  </>
                 )}
               </li>
             ))}
@@ -217,6 +219,7 @@ const TripList = () => {
       )}
     </div>
   );
+  
 };
 
 export default TripList;
