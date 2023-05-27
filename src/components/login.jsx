@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./styles/login.css";
 
 const Login = () => {
@@ -7,15 +7,18 @@ const Login = () => {
     const [password, setPassword] = useState("");
     const [isAuthenticated, setIsAuthenticated] = useState(false);
 
+    const navigate = useNavigate();
     const handleSubmit = (event) => {
+       
         event.preventDefault();
         if (name.trim() !== "" && password.trim() !== "") {
             setIsAuthenticated(true);
+            navigate("/lfg");
         }
     };
 
     if (isAuthenticated) {
-        return <Link to="/lfg" />;
+        return null; // Since you want to redirect, no need to render anything here
     }
 
     return (
@@ -51,7 +54,6 @@ const Login = () => {
                 <button className="login-btn" type="submit">Login</button>
             </form>
             </div>
-          
         </div>
     )
 }
