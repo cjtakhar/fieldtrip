@@ -132,7 +132,19 @@ const TripList = () => {
                 key={trip.id}
                 onClick={() => handleTripClick(trip.id)}
               >
-                {trip.name}
+                <span className="trip-name">
+                  {trip.name}
+                  {trip.hotelOptions.length > 0 && (
+                    <a
+                      className="hotel-icon-link"
+                      href={trip.hotelOptions[0].hotelWebsite}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <BiHotel className="hotel-icon" />
+                    </a>
+                  )}
+                </span>
                 {isTripSelected(trip.id) && (
                   <>
                     <div className="hotel-options">
@@ -167,25 +179,11 @@ const TripList = () => {
                       ))}
                       <button
                         className="add-hotel-btn"
-                        onClick={(event) =>
-                          handleHotelOptionSubmit(event, trip.id)
-                        }
+                        onClick={(event) => handleHotelOptionSubmit(event, trip.id)}
                       >
                         Add Hotel Option
                       </button>
                     </div>
-                    {trip.hotelOptions.map((option) => (
-                      <React.Fragment key={option.id}>
-                        {option.hotelWebsite && (
-                          <a
-                            className="hotel-website"
-                            href={option.hotelWebsite}
-                          >
-                            <BiHotel />
-                          </a>
-                        )}
-                      </React.Fragment>
-                    ))}
                   </>
                 )}
               </li>
@@ -195,6 +193,6 @@ const TripList = () => {
       )}
     </div>
   );
-};
-
+                        };  
+                        
 export default TripList;

@@ -73,7 +73,7 @@
     text-align: left;
 }
 
-.list-delete {
+.delete-btn {
    background-color: white;
     border: none;
     cursor: pointer;
@@ -103,4 +103,19 @@
     font-size: 1.5rem;
     color: purple;
 
+}
+
+.hotel-icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.add-hotel-btn {
+    background-color: white;
+    border: solid 1px;
+    cursor: pointer;
+    margin: 1rem;
 }
